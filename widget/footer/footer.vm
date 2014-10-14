@@ -1,1 +1,3 @@
-<p>bla bla</p>
+<div class="container footer">
+    <p>&copy; Company 2014</p>
+</div>
