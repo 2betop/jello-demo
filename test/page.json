@@ -1,0 +1,31 @@
+{
+    "title": "jello demo",
+
+    "menus": [
+        {
+            "label": "首页",
+            "href": "/"
+        },
+
+        {
+            "label": "前端篇",
+            "href": "/",
+            "children": [
+                {
+                    "label": "jfdks",
+                    "href": "#"
+                }
+            ]
+        },
+
+        {
+            "label": "后端篇",
+            "href": "/"
+        },
+
+        {
+            "label": "常用组件",
+            "href": "/"
+        }
+    ]
+}

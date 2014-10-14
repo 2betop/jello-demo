@@ -1,0 +1,13 @@
+#extends("page/layout/front.vm")
+
+
+#block("content")
+
+Test to do.
+
+#end## end of body
+
+
+## 需要依赖一下自己，否则该 vm 中依赖没法自动加载进来。
+#require("page/index.vm")
+#end
