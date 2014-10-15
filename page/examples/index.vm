@@ -37,7 +37,7 @@
 </form>
 
 #script()
-require(['app/examples/index'], function(app) {
+require(['./index'], function(app) {
     app({
         selector: '#nodeForm'
     });

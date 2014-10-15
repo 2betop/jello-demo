@@ -23,14 +23,6 @@ fis.config.set('settings.postprocessor.amd', {
             name: 'libs',
             location: 'widget/libs/',
             main: 'index'
-        },
-
-
-        // 用来存放页面脚本入口
-        {
-            name: 'app',
-            location: 'widget/app/',
-            main: 'index'
         }
     ],
 
@@ -73,3 +65,15 @@ fis.config.set('pack', {
     'pkg/app.js': ['widget/app/examples/validator.js'],
 
 });
+
+fis.config.set('roadmap.path', [
+
+        // 设置 page/**.js 为 isMod 可以自动包装成 amd
+        // 不在 jello 规范里面，暂时放在此配置
+        {
+            reg: /^\/page\/(.*\.js)$/i,
+            isMod: true,
+            release: '${statics}/${namespace}/page/$1'
+        }
+    ].concat(fis.config.get('roadmap.path', [])));
+
