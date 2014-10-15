@@ -21,7 +21,7 @@ fis.config.set('settings.postprocessor.amd', {
         // 用来存放 libs 库
         {
             name: 'libs',
-            location: 'widget/libs/',
+            location: 'static/libs/',
             main: 'index'
         }
     ],
@@ -67,13 +67,19 @@ fis.config.set('pack', {
 });
 
 fis.config.set('roadmap.path', [
+        // 不在 jello 规范里面，暂时放在此配置
 
         // 设置 page/**.js 为 isMod 可以自动包装成 amd
-        // 不在 jello 规范里面，暂时放在此配置
         {
             reg: /^\/page\/(.*\.js)$/i,
             isMod: true,
             release: '${statics}/${namespace}/page/$1'
+        },
+
+        {
+            reg: /^\/static\/libs\/(.*\.js)$/i,
+            isMod: true,
+            release: '${statics}/${namespace}/libs/$1'
         }
     ].concat(fis.config.get('roadmap.path', [])));
 

@@ -36,7 +36,7 @@
         <div class="col-md-4">
             <h2>模板继承 &amp; widget 机制</h2>
             <p>受 smarty 中模板继承启发，让 velocity 版本最大程度复用</p>
-            <p>公用部分抽离成 widget 便于夸页面复用。</p>
+            <p>公用部分抽离成 widget 便于多页面间复用。</p>
         </div>
         <div class="col-md-4">
             <h2>简化环境安装</h2>
