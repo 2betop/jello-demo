@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-#html("static/js/mod-amd.js")
+#html("static/js/require.js")
 
     #head()
         <meta charset="UTF-8">
