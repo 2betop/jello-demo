@@ -1,0 +1,13 @@
+#extends("page/layout/2columns-with-left-sidebar.vm")
+
+#block("sidebar")
+    #widget("widget/sidebarmenus/sidebarmenus.vm" "with:$sidebar")
+#end
+
+#block("content")
+
+    <!--inline[/doc/standard/_standard.md]-->
+
+#end
+
+#end

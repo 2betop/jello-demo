@@ -4,6 +4,10 @@ body {
     padding-top: 50px;
 }
 
+.navbar-brand.active {
+    color: #eee;
+}
+
 #middle {
     min-height: 400px;
 }

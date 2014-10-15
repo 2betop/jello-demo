@@ -49,8 +49,8 @@ fis.config.set('settings.parser.sass.include_paths', [
     'static/scss'
 ]);
 
-// 项目排除掉_xxx.scss、xxx.min.js
-fis.config.set('project.exclude', /((.*\/)?\_[^\/]*\.scss$|.*\.min\.js$)/i);
+// 项目排除掉_xxx.scss、_xxx.md、xxx.min.js
+fis.config.set('project.exclude', /((.*\/)?\_[^\/]*\.(scss|md)$|.*\.min\.js$)/i);
 
 // 使用 depscombine 是因为，在配置 pack 的时候，命中的文件其依赖也会打包进来。
 fis.config.set('modules.packager', 'depscombine');
@@ -83,3 +83,9 @@ fis.config.set('roadmap.path', [
         }
     ].concat(fis.config.get('roadmap.path', [])));
 
+// markdown 支持，因为需要写文档，不用 markdown 真是不习惯
+// npm install -g fis-parser-marked
+// use the `fis-parser-marked` plugin to parse *.md file
+fis.config.set('modules.parser.md', 'marked');
+// *.md will be released as *.html
+fis.config.set('roadmap.ext.md', 'html');

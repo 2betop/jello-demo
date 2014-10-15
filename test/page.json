@@ -3,8 +3,37 @@
 
     "menus": [
         {
+            "label": "文档",
+            "children": [
+                {
+                    "label": "目录规范",
+                    "href": "/doc/standard"
+                },
+
+                {
+                    "label": "模板继承",
+                    "href": "/doc/layout"
+                },
+
+                {
+                    "label": "widget",
+                    "href": "/doc/widget"
+                },
+
+                {
+                    "label": "数据绑定",
+                    "href": "/doc/binding"
+                },
+
+                {
+                    "label": "页面模拟",
+                    "href": "/doc/rewrite"
+                }
+            ]
+        },
+        {
             "label": "前端篇",
-            "href": "/",
+            "href": "/jfds",
             "children": [
                 {
                     "label": "jfdks",
@@ -15,12 +44,12 @@
 
         {
             "label": "后端篇",
-            "href": "/"
+            "href": "/fdsfs"
         },
 
         {
             "label": "常用组件",
-            "href": "/"
+            "href": "/fds"
         }
     ]
 }
