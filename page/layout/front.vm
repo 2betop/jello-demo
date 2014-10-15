@@ -6,7 +6,7 @@
             #widget("widget/header/header.vm")
         #end
 
-        <div id="middle" class="container">#block("content")#end</div>
+        #block("content")#end
 
         #block("footer")
             #widget("widget/footer/footer.vm")
