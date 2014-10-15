@@ -59,3 +59,17 @@ fis.config.set('settings.parser.sass.include_paths', [
 
 // 项目排除掉_xxx.scss、xxx.min.js
 fis.config.set('project.exclude', /((.*\/)?\_[^\/]*\.scss$|.*\.min\.js$)/i);
+
+// 使用 depscombine 是因为，在配置 pack 的时候，命中的文件其依赖也会打包进来。
+fis.config.set('modules.packager', 'depscombine');
+
+fis.config.set('pack', {
+    // css
+    // 暂没有太多 css 文件，先不合并
+    // 'pkg/all.css': [],
+
+    // js
+    // 依赖也会自动打包进来。
+    'pkg/app.js': ['widget/app/examples/validator.js'],
+
+});
