@@ -48,5 +48,5 @@ require(['app/examples/validator'], function(app) {
 #end## end of body
 
 ## 需要依赖一下自己，否则该 vm 中依赖没法自动加载进来。
-#require("page/examples/validator.vm")
+#require("page/examples/index.vm")
 #end
