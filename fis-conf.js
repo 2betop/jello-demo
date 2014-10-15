@@ -50,7 +50,7 @@ fis.config.set('settings.parser.sass.include_paths', [
 ]);
 
 // 项目排除掉_xxx.scss、_xxx.md、xxx.min.js
-fis.config.set('project.exclude', /((.*\/)?\_[^\/]*\.(scss|md)$|.*\.min\.js$)/i);
+fis.config.set('project.exclude', /((.*\/)?\_[^\/]*\.scss$|.*\.min\.js$)/i);
 
 // 使用 depscombine 是因为，在配置 pack 的时候，命中的文件其依赖也会打包进来。
 fis.config.set('modules.packager', 'depscombine');
@@ -67,6 +67,12 @@ fis.config.set('pack', {
 });
 
 fis.config.set('roadmap.path', [
+        {
+            reg: 'doc/**.md',
+            release: false
+        },
+
+
         // 不在 jello 规范里面，暂时放在此配置
 
         // 设置 page/**.js 为 isMod 可以自动包装成 amd
