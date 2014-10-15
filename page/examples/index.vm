@@ -37,7 +37,7 @@
 </form>
 
 #script()
-require(['app/examples/validator'], function(app) {
+require(['app/examples/index'], function(app) {
     app({
         selector: '#nodeForm'
     });
