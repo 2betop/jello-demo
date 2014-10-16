@@ -1,0 +1,14 @@
+#set($pageTitle="页面模拟")
+#set($title="页面模拟")
+
+#extends("page/layout/2columns-with-left-sidebar.vm")
+
+#block("sidebar")
+    #widget("widget/sidebarmenus/sidebarmenus.vm" "var:menus=$menus.get(0).children")
+#end
+
+#block("content")
+
+#end
+
+#end

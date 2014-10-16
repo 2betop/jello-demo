@@ -1,19 +1,15 @@
 #if ($menus)
 
     ## velocity 宏示例
-    #macro( renderMenus $menus $child)
-        #if( $child )
+    #macro( renderMenus $menus)
         <ul class="nav" role="menu">
-        #else
-        <ul class="nav nav-pills nav-stacked" role="menu">
-        #end
 
         #foreach( $menu in $menus )
             <li #if( $menu.active )class="active"#end>
-                <a data-target="$!{menu.href}" href="$!{menu.href}">$!{menu.label}</a>
+                <a href="$!{menu.href}">$!{menu.label}</a>
 
                 #if( $menu.children )
-                #renderMenus($menu.children true)
+                #renderMenus($menu.children)
                 #end
             </li>
         #end

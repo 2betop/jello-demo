@@ -20,6 +20,16 @@
             padding: 5px 20px;
         }
 
+        & > .active > a,
+        & > .active:hover > a,
+        & > .active:focus > a {
+            font-weight: bold;
+            color: #563d7c;
+            background-color: transparent;
+            border-right: 1px solid #563d7c;
+            @include border-radius(0);
+        }
+
         .nav {
             display: none;
             margin-bottom: 8px;
@@ -37,6 +47,7 @@
         position: static;
     }
 }
+
 
 @media (min-width: 992px) {
     .jello-toc.affix {

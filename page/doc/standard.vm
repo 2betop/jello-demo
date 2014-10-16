@@ -1,6 +1,10 @@
-#extends("page/layout/2columns-with-left-sidebar.vm")
+#extends("page/layout/3columns.vm")
 
 #block("sidebar")
+    #widget("widget/sidebarmenus/sidebarmenus.vm" "var:menus=$menus.get(0).children")
+#end
+
+#block("sidebarSecondary")
     ## 注意只里面的 with:$sidebar 意思是将当前 sidebar 变量对象中的所有属性作为 widget 里面的局部变量。
     #widget("widget/sidebarmenus/sidebarmenus.vm" "with:$sidebar")
 #end

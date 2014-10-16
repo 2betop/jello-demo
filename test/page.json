@@ -1,5 +1,6 @@
 {
     "title": "jello demo",
+    "pageTitle": "页面标题",
 
     "menus": [
         {
@@ -21,23 +22,22 @@
                 },
 
                 {
-                    "label": "数据绑定",
-                    "href": "/doc/binding"
+                    "label": "页面模拟",
+                    "href": "/doc/rewrite"
                 },
 
                 {
-                    "label": "页面模拟",
-                    "href": "/doc/rewrite"
+                    "label": "数据绑定",
+                    "href": "/doc/binding"
                 }
             ]
         },
         {
-            "label": "前端篇",
-            "href": "/jfds",
+            "label": "示例",
             "children": [
                 {
-                    "label": "jfdks",
-                    "href": "#"
+                    "label": "表单验证",
+                    "href": "/examples/form"
                 }
             ]
         },

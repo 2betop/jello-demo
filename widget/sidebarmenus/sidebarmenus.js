@@ -1,4 +1,4 @@
-require('bootstrap');
+require('libs/scrollspy');
 var $ = require('jquery');
 var $toc = $('.jello-toc');
 
