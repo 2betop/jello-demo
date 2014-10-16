@@ -74,6 +74,12 @@ fis.config.set('roadmap.path', [
 
 
         // 不在 jello 规范里面，暂时放在此配置
+        // 文件名以 _ 下划线打头的，最终都不 release
+        {
+            reg: '**/_*.*',
+            release: false,
+            useAMD: false
+        },
 
         // 设置 page/**.js 为 isMod 可以自动包装成 amd
         {
@@ -95,3 +101,7 @@ fis.config.set('roadmap.path', [
 fis.config.set('modules.parser.md', 'marked');
 // *.md will be released as *.html
 fis.config.set('roadmap.ext.md', 'html');
+
+// js 模板支持
+fis.config.set('modules.parser.tmpl', 'utc');
+// fis.config.set('roadmap.ext.tmpl', 'js');
