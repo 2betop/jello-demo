@@ -22,17 +22,17 @@
     </p>
 </div>
 
-<div class="bs-callout bs-callout-info">
+<div class="bs-callout bs-callout-success">
     <h4>ajax 异步数据 - 通过 json 文件模拟</h4>
     <p>
-        <button id="fromJson" data-loading-text="加载中。。。" class="btn btn-info">显示异步数据</button>
+        <button id="fromJson" data-loading-text="加载中。。。" class="btn btn-success">显示异步数据</button>
     </p>
 </div>
 
-<div class="bs-callout bs-callout-info">
+<div class="bs-callout bs-callout-success">
     <h4>ajax 异步数据 - 通过 jsp 文件模拟</h4>
     <p>
-        <button id="fromJsp" data-loading-text="加载中。。。" class="btn btn-info">显示异步数据</button>
+        <button id="fromJsp" data-loading-text="加载中。。。" class="btn btn-success">显示异步数据</button>
     </p>
 </div>
 

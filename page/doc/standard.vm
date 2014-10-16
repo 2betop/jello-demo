@@ -12,7 +12,7 @@
 #block("content")
     ## 内嵌 markdown 文件，这是编译期做得事情。
     <div class="markdown">
-    <!--inline[/doc/standard/_standard.md]-->
+    <!--inline[./_standard.md]-->
     </div>
 #end
 
