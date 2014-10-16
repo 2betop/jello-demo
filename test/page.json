@@ -36,6 +36,10 @@
             "label": "示例",
             "children": [
                 {
+                    "label": "ajax 数据模拟",
+                    "href": "/examples/ajax"
+                },
+                {
                     "label": "表单验证",
                     "href": "/examples/form"
                 }
