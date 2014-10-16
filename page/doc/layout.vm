@@ -49,50 +49,31 @@
 
         <p>layout.vm</p>
         <div class="highlight highlight-velocity"><pre><span class="x">&lt;!DOCTYPE html&gt;</span>
-<span class="x">  </span><span class="cp">#</span><span class="nf">html</span><span class="p">(</span><span class="s2">"example:static/js/mod.js"</span><span class="p">)</span><span class="x"></span>
+<span class="x">  </span><span class="cp">#</span><span class="nf">html</span><span class="p">()</span><span class="x"></span>
 
 <span class="x">  </span><span class="cp">#</span><span class="nf">head</span><span class="p">()</span><span class="x"></span>
 <span class="x">    &lt;meta charset="utf-8"/&gt;</span>
 <span class="x">    &lt;meta content="" name="description"&gt;</span>
 <span class="x">    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;</span>
 <span class="x">    &lt;title&gt;Demo&lt;/title&gt;</span>
-<span class="x">    </span><span class="cp">#</span><span class="nf">require</span><span class="p">(</span><span class="s2">"example:static/css/bootstrap.css"</span><span class="p">)</span><span class="x"></span>
-<span class="x">    </span><span class="cp">#</span><span class="nf">require</span><span class="p">(</span><span class="s2">"example:static/css/bootstrap-theme.css"</span><span class="p">)</span><span class="x"></span>
-<span class="x">    </span><span class="cp">#</span><span class="nf">require</span><span class="p">(</span><span class="s2">"example:static/js/jquery-1.10.2.js"</span><span class="p">)</span><span class="x"></span>
-<span class="x">    </span><span class="cp">#</span><span class="nf">require</span><span class="p">(</span><span class="s2">"example:static/js/bootstrap.js"</span><span class="p">)</span><span class="x"></span>
-<span class="x">  </span><span class="cp">#</span><span class="nf">end</span><span class="x"> </span><span class="cp">##</span><span class="c"> end head</span><span class="x"></span>
+<span class="x">  </span><span class="cp">#</span><span class="nf">end</span><span class="x"> </span>
 
-<span class="cp">#</span><span class="nf">body</span><span class="p">()</span><span class="x"></span>
-<span class="x">&lt;div id="wrapper"&gt;</span>
-<span class="x">  </span><span class="cp">#</span><span class="nf">block</span><span class="p">(</span><span class="s2">"body_content"</span><span class="p">)</span><span class="x"></span>
-<span class="x">      This is body.</span>
+<span class="x">  </span><span class="cp">#</span><span class="nf">body</span><span class="p">()</span><span class="x"></span>
+<span class="x">    &lt;div id="wrapper"&gt;</span>
+<span class="x">      </span><span class="cp">#</span><span class="nf">block</span><span class="p">(</span><span class="s2">"body_content"</span><span class="p">)</span><span class="x"></span>
+<span class="x">          This is body.</span>
+<span class="x">      </span><span class="cp">#</span><span class="nf">end</span><span class="x"></span>
+<span class="x">    &lt;/div&gt;</span>
 <span class="x">  </span><span class="cp">#</span><span class="nf">end</span><span class="x"></span>
-<span class="x">&lt;/div&gt;</span>
-<span class="cp">#</span><span class="nf">end</span><span class="x"> </span><span class="cp">##</span><span class="c"> end body</span><span class="x"></span>
-
-<span class="cp">#</span><span class="nf">require</span><span class="p">(</span><span class="s2">"example:page/layout.vm"</span><span class="p">)</span><span class="x"></span>
-<span class="cp">#</span><span class="nf">end</span><span class="x"> </span><span class="cp">##</span><span class="c"> end html</span><span class="x"></span>
+<span class="cp">#</span><span class="nf">end</span><span class="x"> </span>
 </pre></div>
 
         <p>以上示例通过<code>\#block()</code> 定义了一个区域<code>body_content</code>，那么在子模板中，就可以像以下方式填充它</p>
 
         <div class="highlight highlight-velocity"><pre><span class="cp">#</span><span class="nf">extends</span><span class="p">(</span><span class="s2">"layout.vm"</span><span class="p">)</span><span class="x"></span>
-
-<span class="cp">#</span><span class="nf">block</span><span class="p">(</span><span class="s2">"body_content"</span><span class="p">)</span><span class="x"></span>
-<span class="x">&lt;h1&gt;Hello Demo&lt;/h1&gt;</span>
-
-<span class="x">    </span><span class="cp">#</span><span class="nf">widget</span><span class="p">(</span><span class="s2">"example:widget/header/header.vm"</span><span class="p">)</span><span class="x"></span>
-
-<span class="x">    </span><span class="cp">#</span><span class="nf">script</span><span class="p">()</span><span class="x"></span>
-<span class="x">    // var widgetA = require("example:widget/widgetA/widgetA.js");</span>
-
-<span class="x">    require.async("example:widget/widgetB/widgetB.js", function(api) </span><span class="err">{</span><span class="x"></span>
-<span class="x">    api.sayHelloWorld();</span>
-<span class="x">    });</span>
-<span class="x">    </span><span class="cp">#</span><span class="nf">end</span><span class="x"> </span><span class="cp">##</span><span class="c"> end script</span><span class="x"></span>
-<span class="cp">#</span><span class="nf">end</span><span class="x"> </span><span class="cp">##</span><span class="c"> end block</span><span class="x"></span>
-
-<span class="cp">#</span><span class="nf">require</span><span class="p">(</span><span class="s2">"example:page/index.vm"</span><span class="p">)</span><span class="x"></span>
+<span class="x">    </span><span class="cp">#</span><span class="nf">block</span><span class="p">(</span><span class="s2">"body_content"</span><span class="p">)</span><span class="x"></span>
+<span class="x">    &lt;h1&gt;Hello Demo&lt;/h1&gt;</span>
+<span class="x">    </span><span class="cp">#</span><span class="nf">end</span><span class="x"></span>
 <span class="cp">#</span><span class="nf">end</span><span class="x"></span>
 </pre></div>
 
