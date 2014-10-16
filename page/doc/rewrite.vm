@@ -8,7 +8,7 @@
 #end
 
 #block("content")
-
+    <p class="text-warning">待完善</p>
 #end
 
 #end

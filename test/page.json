@@ -43,13 +43,28 @@
         },
 
         {
-            "label": "后端篇",
-            "href": "/fdsfs"
-        },
+            "label": "模板技巧",
+            "children": [
+                {
+                    "label": "velocity 语法",
+                    "href": "/velocity/index"
+                },
 
-        {
-            "label": "常用组件",
-            "href": "/fds"
+                {
+                    "label": "全局变量",
+                    "href": "/velocity/variables"
+                },
+
+                {
+                    "label": "velocity tools",
+                    "href": "/velocity/tools"
+                },
+
+                {
+                    "label": "jello tools",
+                    "href": "/velocity/jello"
+                }
+            ]
         }
     ]
 }

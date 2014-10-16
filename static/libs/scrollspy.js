@@ -2,6 +2,8 @@
 require('bootstrap');
 var $ = require('jquery');
 var ScrollSpy = $.fn.scrollspy.Constructor;
+
+
 ScrollSpy.prototype.refresh = function() {
     var offsetMethod = 'offset'
     var offsetBase = 0
