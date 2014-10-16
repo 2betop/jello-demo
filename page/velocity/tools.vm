@@ -11,6 +11,23 @@
 
 <p><a href="http://velocity.apache.org/tools/devel/">velocity tools</a>是 <a href="http://velocity.apache.org/">velocity</a> 官方开发一系列帮助开发的工具集，jello 中默认集成了所有的 <a href="http://velocity.apache.org/tools/devel/generic.html">GenericTools</a> </p>
 
+<h2>AlternatorTool</h2>
+<h2>DisplayTool</h2>
+<h2>MathTool</h2>
+<h2>NumberTool</h2>
+<h2>ComparisonDateTool</h2>
+<h2>ClassTool</h2>
+<h2>ConversionTool</h2>
+<h2>EscapeTool</h2>
+<h2>FieldTool</h2>
+<h2>ListTool</h2>
+<h2>ResourceTool</h2>
+<h2>SortTool</h2>
+<h2>LoopTool</h2>
+<h2>ContextTool</h2>
+<h2>LinkTool</h2>
+<h2>RenderTool</h2>
+
 #end## end of body
 
 ## 需要依赖一下自己，否则该 vm 中依赖没法自动加载进来。

@@ -7,6 +7,10 @@
 
 #block("content")
 
+<p>velocity tools 虽然多，但是好像少了一些东西，比如说将 java 对象转换成 json 给 js 使用。</p>
+
+<p>jello tools 就是用来弥补 velocity tools 中缺失的东西。目前只有实现了 <code>\$jello.jsonEncode(\$variable)</code></p>
+
 
 
 #end## end of body
