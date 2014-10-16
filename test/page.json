@@ -1,5 +1,6 @@
 {
     "title": "jello demo",
+    "titleAffix": "jello demo",
     "pageTitle": "页面标题",
 
     "menus": [
@@ -36,8 +37,8 @@
             "label": "示例",
             "children": [
                 {
-                    "label": "ajax 数据模拟",
-                    "href": "/examples/ajax"
+                    "label": "js 数据模拟",
+                    "href": "/examples/data"
                 },
                 {
                     "label": "表单验证",
