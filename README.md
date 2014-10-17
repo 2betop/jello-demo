@@ -10,12 +10,18 @@ Jello demo &amp; doc
     ```
     npm install -g jello
     ```
-2. git clone 下来此仓库
+2. 安装插件
+
+    ```
+    npm install -g fis-parser-marked
+    npm install -g fis-parser-utc
+    ```
+3. git clone 下来此仓库
 
     ```
     git clone https://github.com/2betop/jello-demo.git
     ```
-3. 进入当前目录后发布代码
+4. 进入当前目录后发布代码
 
     ```
     jello release
