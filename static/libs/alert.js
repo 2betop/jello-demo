@@ -9,9 +9,12 @@ var alert = module.exports = function(content, errorLevel, title) {
         errorLevel: errorLevel || 'info'
     }));
 
-    dom.appendTo('body').modal({
-        backdrop: 'static'
-    }).on('hide.bs.modal', function() {
-        dom.remove();
-    });
+    dom
+        .appendTo('body')
+        .modal({
+            backdrop: 'static'
+        })
+        .on('hide.bs.modal', function() {
+            dom.remove();
+        });
 };

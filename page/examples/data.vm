@@ -12,6 +12,8 @@
     <li>来源于异步 ajax 请求</li>
 </ul>
 
+<p>关于数据模拟，请查看<a href="$!{request.contextPath}doc/binding">此处文档说明</a></p>
+
 <h2>示例</h2>
 
 

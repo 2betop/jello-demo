@@ -43,6 +43,10 @@
                 {
                     "label": "表单验证",
                     "href": "/examples/form"
+                },
+                {
+                    "label": "ajax 页面",
+                    "href": "/examples/partial"
                 }
             ]
         },

@@ -1,12 +1,16 @@
-#set($pageTitle="基本表单验证")
-#extends("page/layout/2columns-with-left-sidebar.vm")
-
-#block("sidebar")
-    #widget("widget/sidebarmenus/sidebarmenus.vm" "var:menus=$menus.get(1).children")
+## 如果页面是来自与 ajax 则使用 ajax 骨架
+## 否则使用2栏布局
+#set($layout = "page/layout/2columns-with-left-sidebar.vm")
+#set($pageTitle="正常打开，会输出所有内容")
+#if ($request.getHeader("X-Requested-With").equals("XMLHttpRequest"))
+    #set($layout = "page/layout/ajax.vm")
+    #set($pageTitle="在 ajax 请求中只会显示一部分")
 #end
 
-#block("content")
+#extends($layout)
 
+
+#block("content")
 <form id="nodeForm" role="form" method="POST" action="$action">
     <div class="form-group">
         <label class="control-label" for="input1">用户名<span class="require-note">*</span></label>
@@ -30,18 +34,17 @@
 
     <button type="submit" class="btn btn-primary">提交</button>
 </form>
+#end## end of body
+
 
 #script()
-require(['./form'], function(app) {
+/* fis async 用 `fis async` 告诉编译器，这个 require 以异步方式加载，而不是当程序入口*/
+require(['../form'], function(app) {
     app({
         selector: '#nodeForm'
     });
 });
-#end
+#end##endscript
 
-
-#end## end of body
-
-## 需要依赖一下自己，否则该 vm 中依赖没法自动加载进来。
-#require("page/examples/form.vm")
+#require("page/examples/partial/form.vm")
 #end
