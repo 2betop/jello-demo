@@ -1,3 +1,8 @@
+/**
+ * 标记 css 依赖, 需要用到 loading 图标。
+ * @require /components/fontawesome/css/font-awesome.css
+ */
+
 require('bootstrap');
 var modalTplFn = __inline('./_modal.tmpl');
 
