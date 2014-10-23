@@ -18,7 +18,7 @@
         <div class="col-md-4">
             <h2>前后端分离</h2>
             <p>基于 <a href="http://velocity.apache.org/">velocity</a> 模板，实现数据与页面分离</p>
-            <p>开发分离，制定数据接便能脱离后端独立开发。基于 jello 轻松模拟各类数据。</p>
+            <p>开发分离，制定数据格式便能脱离后端独立开发。基于 jello 轻松模拟各类数据。</p>
         </div>
         <div class="col-md-4">
             <h2>自动性能优化</h2>
@@ -35,7 +35,7 @@
     <div class="row">
         <div class="col-md-4">
             <h2>模板继承 &amp; widget 机制</h2>
-            <p>受 smarty 中模板继承启发，让 velocity 版本最大程度复用</p>
+            <p>提供更好的骨架 (layout) 机制。</p>
             <p>公用部分抽离成 widget 便于多页面间复用。</p>
         </div>
         <div class="col-md-4">

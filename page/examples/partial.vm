@@ -14,8 +14,8 @@
 <div class="bs-callout bs-callout-info">
     <h4>ajax 页面</h4>
     <p>
-        <a id="remoteBtn" class="btn btn-info" href="$!{request.contextPath}examples/partial/form">dialog打开</a>
-        <a class="btn btn-success" target="_blank" href="$!{request.contextPath}examples/partial/form">浏览器中打开</a>
+        <a id="remoteBtn" class="btn btn-info" href="$!{request.contextPath}/examples/partial/form">dialog打开</a>
+        <a class="btn btn-success" target="_blank" href="$!{request.contextPath}/examples/partial/form">浏览器中打开</a>
     </p>
 </div>
 
