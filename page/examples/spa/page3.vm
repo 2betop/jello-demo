@@ -14,6 +14,11 @@
         </div>
 
         <p>单页内容三</p>
+
+        <div class="bs-callout bs-callout-success">
+            <h4>注意此处内容切换是不会刷新页面的。</h4>
+            <p>请打开网络面板观察请求。</p>
+        </div>
     #end
 
     #script()

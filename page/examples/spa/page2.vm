@@ -1,6 +1,6 @@
 #set($title = "单页示例")
 #set($pageTitle = "单页示例")
-#extends("page/layout/smarty.vm")
+#extends("page/layout/smart.vm")
 
     #block("sidebar")
         #widget("widget/sidebarmenus/sidebarmenus.vm" "var:menus=$menus.get(1).children")
@@ -14,6 +14,11 @@
         </div>
 
         <p>单页内容二</p>
+
+        <div class="bs-callout bs-callout-info">
+            <h4>注意此处内容切换是不会刷新页面的。</h4>
+            <p>请打开网络面板观察请求。</p>
+        </div>
     #end
 
     #script()
