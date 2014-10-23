@@ -6,6 +6,7 @@
     "menus": [
         {
             "label": "文档",
+            "href": "/doc",
             "children": [
                 {
                     "label": "目录规范",
@@ -35,6 +36,7 @@
         },
         {
             "label": "示例",
+            "href": "/examples",
             "children": [
                 {
                     "label": "js 数据模拟",
@@ -47,12 +49,17 @@
                 {
                     "label": "ajax 页面",
                     "href": "/examples/partial"
+                },
+                {
+                    "label": "SPA 单页 demo",
+                    "href": "/examples/spa"
                 }
             ]
         },
 
         {
             "label": "模板技巧",
+            "href": "/velocity",
             "children": [
                 {
                     "label": "velocity 语法",
@@ -72,6 +79,22 @@
                 {
                     "label": "jello tools",
                     "href": "/velocity/jello"
+                }
+            ]
+        },
+
+        {
+            "label": "后端使用",
+            "href": "/be",
+            "children": [
+                {
+                    "label": "spring 整合",
+                    "href": "/be/spring"
+                },
+
+                {
+                    "label": "全局变量",
+                    "href": "/be/variables"
                 }
             ]
         }

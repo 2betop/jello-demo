@@ -7,6 +7,8 @@
 
 #block("content")
 
+<p class="text-info">此 demo 演示了，如何快捷方便的使用第三方库。</p>
+
 <form id="nodeForm" role="form" method="POST" action="$action">
     <div class="form-group">
         <label class="control-label" for="input1">用户名<span class="require-note">*</span></label>

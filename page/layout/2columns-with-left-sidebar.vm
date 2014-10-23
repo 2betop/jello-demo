@@ -15,7 +15,7 @@
                           <h1>$pageTitle#if ($subTitle) <small>$subTitle</small>#end</h1>
                         </div>
                     #end
-                    #block("content")#end
+                    <div id="content">#block("content")#end</div>
                 </div>
             </div>
         </div>

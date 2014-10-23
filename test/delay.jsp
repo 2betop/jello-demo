@@ -1,7 +1,6 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%
+<%@ page contentType="text/html;charset=UTF-8" language="java" %><%
     // sleep 3 second.
-    Thread.sleep(3000);
+    Thread.sleep(1000);
 
     String url = request.getParameter("forward");
     if (url != null && !url.isEmpty()) {

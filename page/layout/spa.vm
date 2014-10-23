@@ -1,0 +1,4 @@
+## 单页面骨架，什么也不要，只要 html 内容，样式和 JS
+<!--FIS_STYLE_PLACEHOLDER-->
+#block("content")#end
+<!--FIS_SCRIPT_PLACEHOLDER-->

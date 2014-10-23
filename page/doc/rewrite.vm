@@ -12,6 +12,12 @@
 
     <p>比如： page 目录下面的 index.vm 文件，则可以通过 <code>/page/index</code>(.vm 可以省略)路径预览。</p>
 
+    <div class="bs-callout bs-callout-warning">
+        <h4>namespace 项目</h4>
+        <p>如果当前项目设置了 <code>namespace</code>，则预览地址得加上 <code>namespace</code> 作为前缀。</p>
+        <p>假如 <code>namespace</code> 为 <code>home</code>，预览地址则为：<code>/home/page/index</code></p>
+    </div>
+
     <h2>页面转发</h2>
     <p class="text-warning">这里有个限制就是路径总是以 <code>/page</code> 打头, 且模板路径必须与访问路径一致。这肯定是不能接受的。</p>
 
