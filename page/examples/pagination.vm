@@ -1,0 +1,53 @@
+#set($pageTitle="普通列表页面")
+#set($title="普通列表页面")
+#extends("page/layout/2columns-with-left-sidebar.vm")
+
+#block("sidebar")
+    #widget("widget/sidebarmenus/sidebarmenus.vm" "var:menus=$menus.get(1).children")
+#end
+
+#block("content")
+
+<div class="fulltext-search">
+    <div class="panel panel-default">
+        <div class="panel-heading">模糊搜索</div>
+        <div class="panel-body">
+            <form class='table-form' method="GET" action="">
+            <div class="input-group">
+              <input type="text" name="search" value="$!{request.getParameter("search")}" placeholder="请输入名称" class="form-control">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="submit">搜索</button>
+              </span>
+            </div><!-- /input-group -->
+            </form>
+        </div>
+    </div>
+</div>
+
+<div>
+    <h3>查询结果</h3>
+
+    <ul class="pagination">
+        #set($base = $link.query($request.getQueryString()))
+        #set($pages = [1, 2, 3, 4, 5])
+        #foreach ($page in $pages)
+        <li #if ($request.getParameter("pageNum").equals("$page"))class="active"#end><a href="$!{request.contextPath}$base.set('pageNum', $page)">$page</a></li>
+        #end
+    </ul>
+
+    #if ($result.isEmpty())
+    <p class="text-warning">没有结果</p>
+    #else
+    <ul class="list-group">
+        #foreach( $item in $result )
+            <li class="list-group-item">$esc.html($item)</li>
+        #end
+    </ul>
+    #end
+</div>
+
+#end## end of body
+
+## 需要依赖一下自己，否则该 vm 中依赖没法自动加载进来。
+#require("page/examples/pagination.vm")
+#end

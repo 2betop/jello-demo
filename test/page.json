@@ -39,6 +39,10 @@
             "href": "/examples",
             "children": [
                 {
+                    "label": "普通列表页面",
+                    "href": "/examples/pagination"
+                },
+                {
                     "label": "js 数据模拟",
                     "href": "/examples/data"
                 },
