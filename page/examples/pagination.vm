@@ -30,8 +30,13 @@
     <ul class="pagination">
         #set($base = $link.query($request.getQueryString()))
         #set($pages = [1, 2, 3, 4, 5])
+        #set($currentPage = "1")
+        #if ($request.getParameter("pageNum"))
+            #set($currentPage = $request.getParameter("pageNum").toString())
+        #end
+
         #foreach ($page in $pages)
-        <li #if ($request.getParameter("pageNum").equals("$page"))class="active"#end><a href="$!{request.contextPath}$base.set('pageNum', $page)">$page</a></li>
+        <li #if ($currentPage.equals("$page"))class="active"#end><a href="$!{request.contextPath}$base.set('pageNum', $page)">$page</a></li>
         #end
     </ul>
 
