@@ -28,7 +28,11 @@
     <h3>查询结果</h3>
 
     <ul class="pagination">
-        #set($base = $link.query($request.getQueryString()))
+        ## 注意这里面设置了一下 $currentUrl 是因为在 jello 环境下
+        ## 当前请求页面是 rewrite 过来的，与地址栏实际地址不相同，
+        ## 所以借助了一下 $currentUrl 通过 absolute 设置了绝对路径。
+        ## 正常情况下，是不需要设置 absolute 的。
+        #set($base = $link.absolute($currentUrl).query($request.getQueryString()))
         #set($pages = [1, 2, 3, 4, 5])
         #set($currentPage = "1")
         #if ($request.getParameter("pageNum"))
