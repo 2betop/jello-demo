@@ -15,6 +15,7 @@ Jello demo &amp; doc
     ```
     npm install -g fis-parser-marked
     npm install -g fis-parser-utc
+    npm install -g fis-parser-sass
     ```
 3. git clone 下来此仓库
 
@@ -25,5 +26,6 @@ Jello demo &amp; doc
 
     ```
     jello release
+    jello server start
     ```
 4. 自动打开浏览器预览页面
