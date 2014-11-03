@@ -24,9 +24,6 @@
             ## 定义一个区域
             #block("body")#end
         </div>
-
-        <!--添加livereload注释-->
-        <!--livereload-->
     #end## end of body
 
     #script()
