@@ -78,7 +78,8 @@ fis.config.set('roadmap.path', [
         {
             reg: '**/_*.*',
             release: false,
-            useAMD: false
+            useAMD: false,
+            useOptimizer: false
         },
 
         // 设置 page/**.js 为 isMod 可以自动包装成 amd
