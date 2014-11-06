@@ -18,6 +18,13 @@
         <p>假如 <code>namespace</code> 为 <code>home</code>，预览地址则为：<code>/home/page/index</code></p>
     </div>
 
+    <div class="bs-callout bs-callout-success">
+        <h4>预览 HTML/JSP</h4>
+        <p>jello 除了能预览 vm 页面，一些简单的 html、jsp 页面，也可以像预览 vm 页面一样预览，不同的是，不会自动关联上<a href="$!{request.contextPath}/doc/binding">模拟数据</a>。</p>
+        <p><strong>示例</strong></p>
+        <p><a href="$!{request.contextPath}/page/html/index.html" target="_blank">简单 html 页面</a>，<a href="$!{request.contextPath}/page/jsp/index.jsp" target="_blank">简单的 jsp 页面</a></p>
+    </div>
+
     <h2>页面转发</h2>
     <p class="text-warning">这里有个限制就是路径总是以 <code>/page</code> 打头, 且模板路径必须与访问路径一致。这肯定是不能接受的。</p>
 

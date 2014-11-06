@@ -62,6 +62,8 @@ fis.config.set('pack', {
 
     // js
     // 依赖也会自动打包进来。
+
+    'pkg/boot.js': ['static/js/require.js', 'components/jquery/jquery.js', 'components/bootstrap/js/bootstrap.js'],
     'pkg/app.js': ['page/examples/form.js']
 
 });
