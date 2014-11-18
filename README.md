@@ -1,7 +1,7 @@
 jello-demo
 ==========
 
-Jello demo &amp; doc
+Jello demo &amp; doc, you can [preview this online](http://106.186.23.103:8080/).
 
 ## 如何使用
 
