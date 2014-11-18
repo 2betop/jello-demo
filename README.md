@@ -16,6 +16,7 @@ Jello demo &amp; doc
     npm install -g fis-parser-marked
     npm install -g fis-parser-utc
     npm install -g fis-parser-sass
+    npm install -g fis-packager-depscombine
     ```
 3. git clone 下来此仓库
 
