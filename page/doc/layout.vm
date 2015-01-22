@@ -21,7 +21,6 @@
 #end
 
 #block("content")
-    ## 内嵌 markdown 文件，这是编译期做得事情。
     <div class="markdown">
         <p>模板继承思想来源于 <a href="http://www.smarty.net/inheritance">smarty</a>, 可以用来更好的复用代码。</p>
 

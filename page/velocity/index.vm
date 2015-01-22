@@ -2,7 +2,7 @@
 #extends("/page/layout/2columns-with-left-sidebar.vm")
 
 #block("sidebar")
-    #widget("/widget/sidebarmenus/sidebarmenus.vm" "var:menus=$menus.get(2).children")
+    #widget("/widget/sidebarmenus/sidebarmenus.vm" "var:menus=$menus.get(3).children")
 #end
 
 #block("content")
@@ -65,6 +65,16 @@
     <p>为什么要用 <code>FIS 资源 ID</code> 因为，我们的静态资源很可能是部署在 CDN 上 或者 文件名加了 md5 截，所以我们需要用 <code>FIS 资源 ID</code>标识资源，这样我们可以通过查找 jello release 出来的 map.json 表，查找出最终的存放路径。</p>
 </div>
 
+<div class="bs-callout bs-callout-success">
+    <h4>更新</h4>
+    <p>Jello 新版本已经支持基于项目的绝对路径，或者相对路径。为了方便项目间迁移。请使用 namespace 无关的路径。除非你需要跨项目引用。</p>
+
+    <p>${esc.hash}require() 新加了两个参数， ${esc.d}prefix, ${esc.d}affix。prefix 和 affix 会对应的在标签头部和尾部补充内容。如：</p>
+
+    <div class="highlight"><pre lang="velocity"><code>${esc.hash}require("/static/scss/ie.scss" "&lt;!--[if lt IE 8]&gt;" "&lt;![endif]--&gt;")
+</code></pre></div>
+</div>
+
 <h3>${esc.hash}script() &amp; ${esc.hash}style()</h3>
 <p>用来收集 js 和 css 如：</p>
 
@@ -81,6 +91,11 @@
 <span class="cp">#</span><span class="nf">script</span><span class="p">(</span><span class="s2">"//code.jquery.com/jquery-1.11.0.min.js"</span><span class="p">)</span><span class="cp">#</span><span class="nf">end</span><span class="x"></span>
 </pre></div>
 
+<div class="bs-callout bs-callout-success">
+    <h4>更新</h4>
+    <p>${esc.h}script ${esc.h}style 同样支持 prefix 和 affix，请参考 require 中的说明。</p>
+</div>
+
 <h3>${esc.hash}html() &amp; ${esc.hash}head() &amp; ${esc.hash}body() </h3>
 
 <p>用来代替 html、head、body 标签，通过这些标签组织代码，jello 就知道把收集的 js 和 css 集中在什么地方输出了。</p>
@@ -91,7 +106,7 @@
 <h3>${esc.hash}widget()</h3>
 <p>引入一个模板碎片文件，支持指定局部变量。更多信息请查看此处<a href="$!{request.contextPath}/doc/widget">说明</a>。</p>
 
-<h3>${esc.hash}extends() &amp; ${esc.hash}blocks()</h3>
+<h3>${esc.hash}extends() &amp; ${esc.hash}blocks() &amp; ${esc.h}parent()</h3>
 
 <p>请查看<a href="$!{request.contextPath}/doc/layout">模板继承说明</a>。</p>
 

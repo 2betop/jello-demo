@@ -13,9 +13,7 @@
             <li class="dropdown #if( $menu.active )active#end">
                 <a href="$!{request.contextPath}$!{menu.href}" class="dropdown-toggle" data-toggle="dropdown" href="#">$!{menu.label} <span class="caret"></span></a>
 
-                #if( $menu.children )
                 #renderMenus($menu.children true)
-                #end
             </li>
             #else
             <li #if( $menu.active )class="active"#end>

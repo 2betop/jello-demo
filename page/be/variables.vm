@@ -2,7 +2,7 @@
 #extends("/page/layout/2columns-with-left-sidebar.vm")
 
 #block("sidebar")
-    #widget("/widget/sidebarmenus/sidebarmenus.vm" "var:menus=$menus.get(3).children")
+    #widget("/widget/sidebarmenus/sidebarmenus.vm" "var:menus=$menus.get(4).children")
 #end
 
 #block("content")

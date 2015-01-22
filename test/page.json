@@ -62,6 +62,34 @@
         },
 
         {
+            "label": "Jsp",
+            "href": "/jsp",
+            "children": [
+                {
+                    "label": "Jsp 语法说明",
+                    "href": "/jsp/index"
+                },
+                {
+                    "label": "jsp 模板继承",
+                    "href": "/jsp/layout"
+                },
+                {
+                    "label": "jsp widget",
+                    "href": "/jsp/widget"
+                },
+                {
+                    "label": "页面模拟",
+                    "href": "/jsp/rewrite"
+                },
+
+                {
+                    "label": "数据绑定",
+                    "href": "/jsp/binding"
+                }
+            ]
+        },
+
+        {
             "label": "模板技巧",
             "href": "/velocity",
             "children": [

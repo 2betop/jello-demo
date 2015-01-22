@@ -21,7 +21,7 @@
     <p>除了模板复用外，有时候变量也需要复用，在通过 <code>\#widget()</code> 引入模板的时候，可以通过以下两种方式指定变量</p>
 
     <ul>
-        <li><code>with</code> 将指定变量下面的左右属性做为 widget 中的局部变量使用</li>
+        <li><code>with</code> 将指定变量下面的所有属性做为 widget 中的局部变量使用</li>
         <li><code>var</code> 设置 widget 中局部变量</li>
     </ul>
 

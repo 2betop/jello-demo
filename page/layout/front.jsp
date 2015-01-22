@@ -3,7 +3,7 @@
     <fis:block name="body">
 
         <fis:block name="header">
-            <fis:widget name="/widget/header/header.vm" />
+            <fis:widget name="/widget/header/header.jsp" />
         </fis:block>
 
         <fis:block name="content"></fis:block>
