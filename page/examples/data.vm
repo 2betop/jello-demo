@@ -56,7 +56,7 @@ require(['./data'], function(app) {
 
         jsp: {
             btn: '#fromJsp',
-            remote: '/jsp'
+            remote: '/jspdata'
         }
     });
 });
