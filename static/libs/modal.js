@@ -1,6 +1,6 @@
 /**
  * 标记 css 依赖, 需要用到 loading 图标。
- * @require /components/fontawesome/css/font-awesome.css
+ * @require font-awesome/css/font-awesome.css
  */
 
 require('bootstrap');

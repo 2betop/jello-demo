@@ -1,9 +1,9 @@
 ## 如果页面是来自与 ajax 则使用 ajax 骨架
 ## 否则使用2栏布局
-#set($layout = "page/layout/2columns-with-left-sidebar.vm")
+#set($layout = "#uri('/page/layout/2columns-with-left-sidebar.vm')")
 #set($pageTitle="正常打开，会输出所有内容")
 #if ($request.getHeader("X-Requested-With").equals("XMLHttpRequest"))
-    #set($layout = "page/layout/ajax.vm")
+    #set($layout = "#uri('/page/layout/ajax.vm')")
     #set($pageTitle="在 ajax 请求中只会显示一部分")
 #end
 
@@ -46,5 +46,5 @@ require(['../form'], function(app) {
 });
 #end##endscript
 
-#require("page/examples/partial/form.vm")
+#require("./form.vm")
 #end

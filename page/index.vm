@@ -1,4 +1,4 @@
-#extends("page/layout/front.vm")
+#extends("/page/layout/front.vm")
 
 
 #block("content")
@@ -7,7 +7,7 @@
 <div class="jumbotron">
     <div class="container">
         <h1>Jello <small>['dʒeləu]</small></h1>
-        <p>针对服务端为 JAVA + Velocity 的前端集成解决方案。</p>
+        <p>针对服务端为 JAVA + Velocity/jsp 的前端集成解决方案。</p>
         <p>为优化前端开发效率而生，提供前后端开发分离、自动性能优化、模块化开发机制等功能。</p>
         <p><a href="http://oak.baidu.com/docs/jello" class="btn btn-primary btn-lg" role="button">查看更多 &raquo;</a></p>
     </div>
@@ -17,7 +17,7 @@
     <div class="row">
         <div class="col-md-4">
             <h2>前后端分离</h2>
-            <p>基于 <a href="http://velocity.apache.org/">velocity</a> 模板，实现数据与页面分离</p>
+            <p>基于 <a href="http://velocity.apache.org/">velocity</a>/jsp 模板，实现数据与页面分离</p>
             <p>开发分离，制定数据格式便能脱离后端独立开发。基于 jello 轻松模拟各类数据。</p>
         </div>
         <div class="col-md-4">
@@ -35,7 +35,7 @@
     <div class="row">
         <div class="col-md-4">
             <h2>模板继承 &amp; widget 机制</h2>
-            <p>提供更好的骨架 (layout) 机制。</p>
+            <p>提供更好的骨架 (<a href="/doc/layout">layout</a>) 机制。</p>
             <p>公用部分抽离成 widget 便于多页面间复用。</p>
         </div>
         <div class="col-md-4">
@@ -52,5 +52,5 @@
 #end## end of body
 
 ## 需要依赖一下自己，否则该 vm 中依赖没法自动加载进来。
-#require("page/index.vm")
+#require("./index.vm")
 #end

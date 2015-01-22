@@ -17,6 +17,7 @@ Jello demo &amp; doc, you can [preview this online](http://106.186.23.103:8080/)
     npm install -g fis-parser-utc
     npm install -g fis-parser-sass
     npm install -g fis-packager-depscombine
+    npm install -g fis-postprocessor-am
     ```
 3. git clone 下来此仓库
 

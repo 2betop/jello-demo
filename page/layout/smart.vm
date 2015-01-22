@@ -1,8 +1,7 @@
 ## 只能判断，是否来源于 ajax
-#if (!$layout || $layout.isEmpty())
-    #set($layout = "page/layout/2columns-with-left-sidebar.vm")
-#end
 #if ($request.getHeader("X-Requested-With").equals("XMLHttpRequest"))
-    #set($layout = "page/layout/spa.vm")
+    #extends("./spa.vm")#end
+#else
+    #extends("./2columns-with-left-sidebar.vm")#end
 #end
-#extends($layout)#end
+

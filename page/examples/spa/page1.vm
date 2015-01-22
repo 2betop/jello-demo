@@ -1,9 +1,9 @@
 #set($title = "单页示例")
 #set($pageTitle = "单页示例")
-#extends("page/layout/smart.vm")
+#extends("/page/layout/smart.vm")
 
     #block("sidebar")
-        #widget("widget/sidebarmenus/sidebarmenus.vm" "var:menus=$menus.get(1).children")
+        #widget("/widget/sidebarmenus/sidebarmenus.vm" "var:menus=$menus.get(1).children")
     #end
 
     #block("content")
@@ -29,5 +29,5 @@
     #end
 
     ## 需要依赖一下自己，否则该 vm 中依赖没法自动加载进来。
-    #require("page/examples/spa/page1.vm")
+    #require("./page1.vm")
 #end

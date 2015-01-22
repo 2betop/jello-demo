@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=utf-8" %><%@ taglib uri="/fis" prefix="fis"%><fis:extends name="page/layout/frame.jsp">
+<%@ page contentType="text/html;charset=utf-8" %><%@ taglib uri="/fis" prefix="fis"%><fis:extends name="./frame.jsp">
 
     <fis:block name="body">
 
@@ -14,5 +14,5 @@
 
     </fis:block>
 
-    <fis:require name="page/layout/front.jsp" />
+    <fis:require name="./front.jsp" />
 </fis:extends>

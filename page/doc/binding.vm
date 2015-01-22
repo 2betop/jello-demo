@@ -1,10 +1,10 @@
 #set($pageTitle="数据绑定")
 #set($title="数据绑定")
 
-#extends("page/layout/2columns-with-left-sidebar.vm")
+#extends("/page/layout/2columns-with-left-sidebar.vm")
 
 #block("sidebar")
-    #widget("widget/sidebarmenus/sidebarmenus.vm" "var:menus=$menus.get(0).children")
+    #widget("/widget/sidebarmenus/sidebarmenus.vm" "var:menus=$menus.get(0).children")
 #end
 
 #block("content")
@@ -53,14 +53,9 @@
 
     <p>json 绑定的是静态数据，如果需要绑定动态的数据，可以通过 jsp 方式绑定，绑定规则是一样的，且绑定时机在 json 绑定之后，可以针对动态数据，在 jsp 中补充。</p>
 
-    <div class="highlight highlight-jsp"><pre><span class="k">&lt;%@</span> <span class="n">page</span> <span class="n">import</span><span class="o">=</span><span class="s">"org.apache.velocity.context.Context"</span> <span class="k">%&gt;&lt;%</span>
-
-    <span class="n">Context</span> <span class="n">context</span> <span class="o">=</span> <span class="o">(</span><span class="n">Context</span><span class="o">)</span><span class="n">request</span><span class="o">.</span><span class="na">getAttribute</span><span class="o">(</span><span class="s">"context"</span><span class="o">);</span>
-
-
-    <span class="n">context</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"title"</span><span class="o">,</span> <span class="s">"Welcome to jello."</span><span class="o">);</span>
-<span class="k">%&gt;</span>
-</pre></div>
+    <div class="highlight highlight-jsp"><pre><span class="pl-pse">&lt;%</span><span class="pl-s2"></span>
+<span class="pl-s2">request<span class="pl-k">.</span>setAttribute(<span class="pl-s1"><span class="pl-pds">"</span>title<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>Welcome to jello.<span class="pl-pds">"</span></span>);</span>
+<span class="pl-s2"></span><span class="pl-pse"><span class="pl-s2">%</span>&gt;</span></pre></div>
 
 
 
@@ -72,4 +67,6 @@
     </div>
 #end
 
+## 需要依赖一下自己，否则该 vm 中依赖没法自动加载进来。
+#require("./binding.vm")
 #end

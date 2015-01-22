@@ -1,10 +1,10 @@
 #set($pageTitle="页面预览")
 #set($title="页面模拟")
 
-#extends("page/layout/2columns-with-left-sidebar.vm")
+#extends("/page/layout/2columns-with-left-sidebar.vm")
 
 #block("sidebar")
-    #widget("widget/sidebarmenus/sidebarmenus.vm" "var:menus=$menus.get(0).children")
+    #widget("/widget/sidebarmenus/sidebarmenus.vm" "var:menus=$menus.get(0).children")
 #end
 
 #block("content")
@@ -18,12 +18,12 @@
         <p>假如 <code>namespace</code> 为 <code>home</code>，预览地址则为：<code>/home/page/index</code></p>
     </div>
 
-    <div class="bs-callout bs-callout-success">
-        <h4>预览 HTML/JSP</h4>
-        <p>jello 除了能预览 vm 页面，一些简单的 html、jsp 页面，也可以像预览 vm 页面一样预览，不同的是，不会自动关联上<a href="$!{request.contextPath}/doc/binding">模拟数据</a>。</p>
-        <p><strong>示例</strong></p>
-        <p><a href="$!{request.contextPath}/page/html/index.html" target="_blank">简单 html 页面</a>，<a href="$!{request.contextPath}/page/jsp/index.jsp" target="_blank">简单的 jsp 页面</a></p>
-    </div>
+    ## <div class="bs-callout bs-callout-success">
+    ##     <h4>预览 HTML/JSP</h4>
+    ##     <p>jello 除了能预览 vm 页面，一些简单的 html、jsp 页面，也可以像预览 vm 页面一样预览，不同的是，不会自动关联上<a href="$!{request.contextPath}/doc/binding">模拟数据</a>。</p>
+    ##     <p><strong>示例</strong></p>
+    ##     <p><a href="$!{request.contextPath}/page/html/index.html" target="_blank">简单 html 页面</a>，<a href="$!{request.contextPath}/page/jsp/index.jsp" target="_blank">简单的 jsp 页面</a></p>
+    ## </div>
 
     <h2>页面转发</h2>
     <p class="text-warning">这里有个限制就是路径总是以 <code>/page</code> 打头, 且模板路径必须与访问路径一致。这肯定是不能接受的。</p>
@@ -74,4 +74,6 @@ redirect<span class="w"> </span>\/home$<span class="w"> </span>/page/index<span 
     <p>关于json 页面，其实可以用 jsp 页面模拟，如<a href="/jsp" target="_blank">示例</a>，也可以直接在预览 json 文件，只要此文件放在 test 目录下面。如<a href="/json" target="_blank">示例</a>。注意查看 <code>jello-demo</code> 项目下面的 test 目录和 server.conf 文件内容。</p>
 #end
 
+## 需要依赖一下自己，否则该 vm 中依赖没法自动加载进来。
+#require("./rewrite.vm")
 #end

@@ -1,23 +1,23 @@
-#set($layout = "page/layout/2columns-with-left-sidebar.vm")
+#set($layout = "#uri('/page/layout/2columns-with-left-sidebar.vm')")
 #set($param = $request.getParameter("layout"))
 
 #if ($param.equals("right"))
-    #set($layout = "page/layout/2columns-with-right-sidebar.vm")
+    #set($layout = "#uri('/page/layout/2columns-with-right-sidebar.vm')")
 #end
 
 #if ($param.equals("both"))
-    #set($layout = "page/layout/3columns.vm")
+    #set($layout = "#uri('page/layout/3columns.vm')")
 #end
 
 #extends($layout)
 
 #block("sidebarSecondary")
     ## 注意只里面的 with:$sidebar 意思是将当前 sidebar 变量对象中的所有属性作为 widget 里面的局部变量。
-    #widget("widget/sidebarmenus/sidebarmenus.vm" "with:$sidebar")
+    #widget("/widget/sidebarmenus/sidebarmenus.vm" "with:$sidebar")
 #end
 
 #block("sidebar")
-    #widget("widget/sidebarmenus/sidebarmenus.vm" "var:menus=$menus.get(0).children")
+    #widget("/widget/sidebarmenus/sidebarmenus.vm" "var:menus=$menus.get(0).children")
 #end
 
 #block("content")
@@ -68,7 +68,7 @@
 <span class="cp">#</span><span class="nf">end</span><span class="x"> </span>
 </pre></div>
 
-        <p>以上示例通过<code>\#block()</code> 定义了一个区域<code>body_content</code>，那么在子模板中，就可以像以下方式填充它</p>
+        <p>以上示例通过<code>${esc.h}block()</code> 定义了一个区域<code>body_content</code>，那么在子模板中，就可以像以下方式填充它</p>
 
         <div class="highlight highlight-velocity"><pre><span class="cp">#</span><span class="nf">extends</span><span class="p">(</span><span class="s2">"layout.vm"</span><span class="p">)</span><span class="x"></span>
 <span class="x">    </span><span class="cp">#</span><span class="nf">block</span><span class="p">(</span><span class="s2">"body_content"</span><span class="p">)</span><span class="x"></span>
@@ -79,7 +79,30 @@
 
         <div class="bs-callout bs-callout-warning">
             <h4>说明</h4>
-            <p>以上示例，只需关心<code>\#block()</code>和<code>\#extends()</code>标签，其他标签可以忽略</p>
+            <p>以上示例，只需关心<code>${esc.h}block()</code>和<code>${esc.h}extends()</code>标签，其他标签可以忽略</p>
+        </div>
+
+        <h2>覆盖模式</h2>
+
+        <p>默认，在子模板中同名 <code>${esc.h}block()</code> 将会覆盖掉父模板中的同名 <code>${esc.h}block()</code>，有时候，我们希望是扩充，而不是生硬的覆盖。</p>
+
+        <p>新版的 jello 扩充了一个新的 <code>directive</code> <code>${esc.h}parent()</code> 通过它可以用来引用被覆盖的block</p>
+
+        <div class="highlight highlight-velocity">
+            <pre lang="velocity"><code>${esc.h}extends("layout.vm")
+    ${esc.h}block("body_content")
+    ${esc.h}parent()
+    &lt;h1&gt;Hello Demo&lt;/h1&gt;
+    ${esc.h}end
+${esc.h}end
+</code></pre>
+        </div>
+
+        这样 body_content 的输出结果就是这样的。
+
+        <div><pre>This is body.
+
+&lt;h1&gt;Hello Demo&lt;/h1&gt;</pre>
         </div>
 
         <h2 id="局部变量">局部变量</h2>
@@ -88,4 +111,6 @@
     </div>
 #end
 
+## 需要依赖一下自己，否则该 vm 中依赖没法自动加载进来。
+#require("./layout.vm")
 #end

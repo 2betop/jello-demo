@@ -30,19 +30,25 @@ fis.config.set('settings.parser.sass.include_paths', [
 ]);
 
 // 使用 depscombine 是因为，在配置 pack 的时候，命中的文件其依赖也会打包进来。
-fis.config.set('modules.packager', 'depscombine');
+// fis.config.set('modules.packager', 'depscombine');
 
-fis.config.set('pack', {
+// fis.config.set('pack', {
 
-    // css
-    'pkg/frame.css': ['page/layout/frame.vm'],   // 因为依赖会被打包，所以这个规则会把 frame.vm 依赖的 css 打包在一起。
+//     // css
+//     'pkg/frame.css': ['page/layout/frame.vm'],   // 因为依赖会被打包，所以这个规则会把 frame.vm 依赖的 css 打包在一起。
 
-    // js
-    // 依赖也会自动打包进来。
-    'pkg/boot.js': ['static/js/require.js', 'components/jquery/jquery.js', 'components/bootstrap/js/bootstrap.js'],
-    'pkg/app.js': ['page/examples/form.js']
+//     // js
+//     // 依赖也会自动打包进来。
+//     'pkg/boot.js': ['static/js/require.js', 'components/jquery/jquery.js', 'components/bootstrap/js/bootstrap.js'],
+//     'pkg/app.js': ['page/examples/form.js']
 
-});
+// });
+//
+
+// fis.config.set('modules.packager', 'autopack');
+// fis.config.set('settings.packager.autopack', {
+//     type: 'simple'
+// });
 
 fis.config.set('roadmap.path', [
 

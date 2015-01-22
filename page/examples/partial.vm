@@ -1,7 +1,7 @@
-#extends("page/layout/2columns-with-left-sidebar.vm")
+#extends("/page/layout/2columns-with-left-sidebar.vm")
 
 #block("sidebar")
-    #widget("widget/sidebarmenus/sidebarmenus.vm" "var:menus=$menus.get(1).children")
+    #widget("/widget/sidebarmenus/sidebarmenus.vm" "var:menus=$menus.get(1).children")
 #end
 
 #block("content")
@@ -33,5 +33,5 @@ require(['jquery', 'libs/modal'], function($, modal) {
 #end## end of body
 
 ## 需要依赖一下自己，否则该 vm 中依赖没法自动加载进来。
-#require("page/examples/partial.vm")
+#require("./partial.vm")
 #end
