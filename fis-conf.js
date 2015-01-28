@@ -25,8 +25,8 @@ fis.config.set('settings.postprocessor.amd', {
 
 // 设置 sass 的 include_paths 便于组件引入
 fis.config.set('settings.parser.sass.include_paths', [
-    path.join(__dirname, 'components/compass-mixins'),
-    path.join(__dirname, 'static/scss')
+    './static/scss',
+    './components/compass-mixins'
 ]);
 
 // 使用 depscombine 是因为，在配置 pack 的时候，命中的文件其依赖也会打包进来。

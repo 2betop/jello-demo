@@ -26,7 +26,7 @@ $brand-danger:          #d9534f;
 }
 
 .bs-callout-primary {
-  @include bs-callout($brand-primary, lighten($brand-primary, 45%));
+  @include bs-callout($brand-primary  lighten($brand-primary, 45%));
 }
 
 .bs-callout-danger {
