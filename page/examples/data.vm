@@ -51,12 +51,12 @@ require(['./data'], function(app) {
 
         json: {
             btn: '#fromJson',
-            remote: '/json'
+            remote: '$!{request.contextPath}/json'
         },
 
         jsp: {
             btn: '#fromJsp',
-            remote: '/jspdata'
+            remote: '$!{request.contextPath}/jspdata'
         }
     });
 });
