@@ -1,7 +1,7 @@
 jello-demo
 ==========
 
-Jello demo &amp; doc, you can [preview this online](http://106.186.23.103:8080/).
+Jello demo &amp; doc, you can [preview this online](http://oak.baidu.com/jello-demo).
 
 ## 如何使用
 
