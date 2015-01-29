@@ -34,6 +34,8 @@
         path = request.getServletPath();
     }
 
+    path = path.substring(request.getContextPath().length());
+
     context.put("currentUrl", path);
 
     if (menus != null && path != null) {

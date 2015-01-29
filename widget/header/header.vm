@@ -28,7 +28,7 @@
     <!-- Fixed navbar -->
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
-            <a class="navbar-brand #if( $currentUrl == '/' )active#end" href="/">Jello Demo</a>
+            <a class="navbar-brand #if( $currentUrl == '/' )active#end" href="$!{request.contextPath}/">Jello Demo</a>
             #renderMenus($menus)
         </div>
     </div>

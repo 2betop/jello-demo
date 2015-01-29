@@ -63,11 +63,11 @@
 <span class="k">%&gt;</span>
 </pre></div>
 
-        <p><a href="/testpage" target="_blank">示例</a></p>
+        <p><a href="${pageContext.request.contextPath}/testpage" target="_blank">示例</a></p>
 
         <h2>json 页面模拟</h2>
 
-        <p>关于json 页面，其实可以用 jsp 页面模拟，如<a href="/jsp" target="_blank">示例</a>，也可以直接在预览 json 文件，只要此文件放在 test 目录下面。如<a href="/json" target="_blank">示例</a>。注意查看 <code>jello-demo</code> 项目下面的 test 目录和 server.conf 文件内容。</p>
+        <p>关于json 页面，其实可以用 jsp 页面模拟，如<a href="${pageContext.request.contextPath}/jsp" target="_blank">示例</a>，也可以直接在预览 json 文件，只要此文件放在 test 目录下面。如<a href="${pageContext.request.contextPath}/json" target="_blank">示例</a>。注意查看 <code>jello-demo</code> 项目下面的 test 目录和 server.conf 文件内容。</p>
 
     </fis:block>
 

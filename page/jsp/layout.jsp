@@ -89,7 +89,7 @@
 
         <h2 id="局部变量">局部变量</h2>
 
-        <p>请直接查看 widget 中的局部变量用法，用法一样。<a href="/jsp/widget#局部变量">传送门</a></p>
+        <p>请直接查看 widget 中的局部变量用法，用法一样。<a href="${pageContext.request.contextPath}/jsp/widget#局部变量">传送门</a></p>
 
     </fis:block>
 

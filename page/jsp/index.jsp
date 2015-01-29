@@ -13,7 +13,7 @@
     <fis:block name="content">
         <p>新版的 Jello 已经完全采用 jsp 作为模板来开发。完全兼容之前<a href="https://github.com/fouber/fis-java-jsp">云龙老大开发的 jsp 版本</a>。</p>
 
-        <p>请先阅读 <a href="${request.contextPath}/doc/standard">jello 中目录规范</a>，虽然文中的提及的模板是velocity，但是同时适用与 jsp</p>
+        <p>请先阅读 <a href="${pageContext.request.contextPath}/doc/standard">jello 中目录规范</a>，虽然文中的提及的模板是velocity，但是同时适用与 jsp</p>
 
         jello 为了打通前后端，采用 jsp tag 的方式扩充了自定义的标签，使用前，请先在头部加入。
 
@@ -99,11 +99,11 @@ console.log('hello world');
     <div class="highlight highlight-jsp"><pre>&lt;<span class="pl-ent">fis:uri</span> <span class="pl-e">name</span>=<span class="pl-s1"><span class="pl-pds">"</span>ns:static/xxxx/xxx.js<span class="pl-pds">"</span></span> /&gt;</pre></div>
 
     <h3>fis:widget</h3>
-<p>引入一个模板碎片文件，支持指定局部变量。更多信息请查看此处<a href="${request.contextPath}/jsp/widget">说明</a>。</p>
+<p>引入一个模板碎片文件，支持指定局部变量。更多信息请查看此处<a href="${pageContext.request.contextPath}/jsp/widget">说明</a>。</p>
 
 <h3>fis:extends &amp; fis:block &amp; fis:parent</h3>
 
-<p>请查看<a href="${request.contextPath}/jsp/layout">模板继承说明</a>。</p>
+<p>请查看<a href="${pageContext.request.contextPath}/jsp/layout">模板继承说明</a>。</p>
 
     </fis:block>
 

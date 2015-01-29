@@ -35,7 +35,7 @@
     <div class="row">
         <div class="col-md-4">
             <h2>模板继承 &amp; widget 机制</h2>
-            <p>提供更好的骨架 (<a href="/doc/layout">layout</a>) 机制。</p>
+            <p>提供更好的骨架 (<a href="$!{request.contextPath}/doc/layout">layout</a>) 机制。</p>
             <p>公用部分抽离成 widget 便于多页面间复用。</p>
         </div>
         <div class="col-md-4">

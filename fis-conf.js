@@ -73,3 +73,9 @@ fis.config.set('roadmap.ext.md', 'html');
 // js 模板支持
 fis.config.set('modules.parser.tmpl', 'utc');
 // fis.config.set('roadmap.ext.tmpl', 'js');
+//
+
+// 当通过 jello server start --webapp jello-demo
+// 设置其他 context path 的时候用。
+fis.config.set('roadmap.domain', '/jello-demo');
+

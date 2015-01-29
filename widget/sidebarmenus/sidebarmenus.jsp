@@ -5,7 +5,7 @@
         <ul class="nav" role="menu">
             <c:forEach var="menu" items="${menus}">
                 <li <c:if test="${not empty menu.active}">class="active"</c:if>>
-                    <a href="${request.contextPath}${menu.href}">${menu.label}</a>
+                    <a href="${pageContext.request.contextPath}${menu.href}">${menu.label}</a>
                 </li>
             </c:forEach>
         </ul>

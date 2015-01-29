@@ -11,7 +11,7 @@
     </fis:block>
 
     <fis:block name="content">
-        <p>页面中比较常用的小的部分，可以抽离成<a href="/jsp/widget">widget</a>，比如：登陆框、头部菜单、边栏菜单等等</p>
+        <p>页面中比较常用的小的部分，可以抽离成<a href="${pageContext.request.contextPath}/jsp/widget">widget</a>，比如：登陆框、头部菜单、边栏菜单等等</p>
 
         <p>抽离成小模板后，可以通过这样的方式引入页面的任意位置。</p>
 
