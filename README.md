@@ -17,7 +17,7 @@ Jello demo &amp; doc, you can [preview this online](http://oak.baidu.com/jello-d
     npm install -g fis-parser-utc
     npm install -g fis-parser-sass
     npm install -g fis-packager-depscombine
-    npm install -g fis-postprocessor-am
+    npm install -g fis-postprocessor-amd
     ```
 3. git clone 下来此仓库
 
