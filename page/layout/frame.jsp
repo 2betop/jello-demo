@@ -21,6 +21,7 @@
         <div id="wrapper">
             <fis:block name="body"></fis:block>
         </div>
+        <!--livereload-->
     </fis:body>
 
     <fis:script>
