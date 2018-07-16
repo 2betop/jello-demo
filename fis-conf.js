@@ -23,8 +23,10 @@ fis.config.set('settings.postprocessor.amd', {
 // sass/scss 配置
 // --------------------------------
 
+fis.config.set('modules.parser.sass', 'node-sass');
+fis.config.set('modules.parser.scss', 'node-sass');
 // 设置 sass 的 include_paths 便于组件引入
-fis.config.set('settings.parser.sass.include_paths', [
+fis.config.set('settings.parser.node-sass.include_paths', [
     './static/scss',
     './components/compass-mixins'
 ]);
